@@ -1,18 +1,18 @@
-import Api from '@/services/Api'
+import Speaker from '@/services/Speaker'
 export default {
     index(search) {
-        return Api().get('users')
+        return Speaker().get('userss')
     },
     show(userId) {
-        return Api().get('user/' + userId)
-    },
-    post(user) {
-        return Api().post('user', user)
+        return Speaker().get('user/' + userId)
     },
     put(user) {
-        return Api().put('user/' + user.id, user)
+        return Speaker().put('user', user)
+    },
+    post(user) {
+        return Speaker().post('user/' + user.id, user)
     },
     delete(user) {
-        return Api().delete('user/' + user.id, user)
+        return Speaker().delete('user/' + user.id, user)
     },
 }
